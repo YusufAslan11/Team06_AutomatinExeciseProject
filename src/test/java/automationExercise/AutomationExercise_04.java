@@ -1,6 +1,9 @@
 package automationExercise;
 
+import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 public class AutomationExercise_04 extends TestBase {
@@ -22,6 +25,12 @@ public class AutomationExercise_04 extends TestBase {
         driver.get("http://automationexercise.com");
 
         //3. Verify that home page is visible successfully
+        WebElement mainPage=driver.findElement(By.xpath("(//div[@class='col-sm-4'])[1]"));
+        String actualtitle=driver.getTitle();
+        String expectedTitle="Automation Exercise";
+        Assert.assertTrue(actualtitle.contains(expectedTitle));
+        Assert.assertTrue(mainPage.isDisplayed());
+
 
     }
 
