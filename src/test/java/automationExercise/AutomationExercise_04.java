@@ -31,6 +31,49 @@ public class AutomationExercise_04 extends TestBase {
         Assert.assertTrue(actualtitle.contains(expectedTitle));
         Assert.assertTrue(mainPage.isDisplayed());
 
+        tumSayfaResmi();
+
+        //4. Click on 'Signup / Login' button
+      driver.findElement(By.xpath("//i[@class='fa fa-lock']")).click();
+
+      //  5. Verify 'Login to your account' is visible
+
+        WebElement login=driver.findElement(By.xpath("//*[text()='Login to your account']"));
+        bekle(2);
+        webElementResmi(login);
+        Assert.assertTrue(login.isDisplayed());
+
+        //6. Enter correct email address and password
+        WebElement email=driver.findElement(By.xpath("(//input[@type='email'])[1]"));
+        email.sendKeys("ttyusuf18@gmail.com");
+        WebElement pass=driver.findElement(By.xpath("//input[@type='password']"));
+        pass.sendKeys("14561456");
+
+        //7. Click 'login' button
+        driver.findElement(By.xpath("(//button[@type='submit'])[1]")).click();
+
+        //8. Verify that 'Logged in as username' is visible
+
+       WebElement logged=driver.findElement(By.xpath("//i[@class='fa fa-user']"));
+
+        Assert.assertTrue(logged.isDisplayed());
+
+        //9. Click 'Logout' button
+
+        driver.findElement(By.xpath("//i[@class='fa fa-lock']")).click();
+        bekle(3);
+
+        //10. Verify that user is navigated to login page
+        tumSayfaResmi();
+        bekle(2);
+
+        WebElement mainPage1=driver.findElement(By.xpath("//h2[text()='Login to your account']"));
+        Assert.assertTrue(mainPage1.isDisplayed());
+
+
+
+
+
 
     }
 
