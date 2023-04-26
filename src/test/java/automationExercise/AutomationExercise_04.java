@@ -21,6 +21,7 @@ public class AutomationExercise_04 extends TestBase {
      */
     @Test
     public void test_04(){
+       //1. Launch browser
        // 2. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 
