@@ -99,18 +99,6 @@ public class AutomationExercise_15 extends TestBase {
         //9. Click 'Cart' button
         driver.findElement(By.xpath("//u[.='View Cart']")).click();
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
 
