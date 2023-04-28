@@ -10,7 +10,7 @@ import utilities.TestBase;
 
 public class AutomationExercise_14 extends TestBase {
     /*
-    1. Launch browser
+    1. Launch browser //DENEME
 2. Navigate to url 'http://automationexercise.com'
 3. Verify that home page is visible successfully
 4. Add products to cart
