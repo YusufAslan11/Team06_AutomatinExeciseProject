@@ -35,17 +35,17 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         //----------------------------------------------------------------------------------------
-        extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
-        extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
-        extentReports.attachReporter(extentHtmlReporter);
-
-        //Raporda gözükmesini istediğimiz bilgiler için
-        extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Erol");
-        extentHtmlReporter.config().setDocumentTitle("Extent Report");
-        extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+        //extentReports = new ExtentReports();
+        //String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+        //String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
+        //extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
+        //extentReports.attachReporter(extentHtmlReporter);
+//
+        ////Raporda gözükmesini istediğimiz bilgiler için
+        //extentReports.setSystemInfo("Browser", "Chrome");
+        //extentReports.setSystemInfo("Tester", "Erol");
+        //extentHtmlReporter.config().setDocumentTitle("Extent Report");
+        //extentHtmlReporter.config().setReportName("Smoke Test Raporu");
 
     }
 
